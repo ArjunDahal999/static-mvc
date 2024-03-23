@@ -1,0 +1,30 @@
+﻿
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>Super Market Management</title>
+        <link href="~/lib//bootstrap//css/bootstrap.css" rel="stylesheet" />
+    </head>
+    <body>
+      <div class=" container">
+    <nav class="navbar navbar-expand-lg navbar-light  ">
+        <a class="navbar-brand  font-weight-bold" href="#">Shopify</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="home" asp-action="index"  >Home</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" asp-controller="categories" asp-action="index" >Category</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+          @RenderBody()
+      </div>
+      @await RenderSectionAsync("Script", required:false)
+    </body>
+    </html>
